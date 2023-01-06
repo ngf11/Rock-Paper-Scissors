@@ -55,6 +55,7 @@ function playRound(playerChoice){
               alert('You won the game!');
             } else if (computerScore === 3) {
               alert('You lost the game!');
+              showLoseModal();
             }
           }
              
@@ -77,16 +78,34 @@ function darkMode(){
            header.classList.toggle('dark-mode');
     const footer = document.querySelector('footer');
           footer.classList.toggle('dark-mode');
+    const modal = document.querySelector(".modal");
+          modal.classList.toggle("dark-mode");
 }
 
 
+// Modals and play agian button 
+function showLoseModal() {
+    const modal = document.getElementById("lose-modal");
+    modal.style.display = "block";
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("lose-modal");
+    modal.style.display = "none";
+  }
+  
+  const closeButton = document.querySelector(".close-button");
+  closeButton.addEventListener("click", closeModal);
 
 
 
-
-
-
-
+  function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    document.getElementById("human-score").innerText = playerScore;
+    document.getElementById("machine-score").innerText = computerScore;
+    closeModal();
+  }
 
 
 

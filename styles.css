@@ -2,6 +2,7 @@
 *{
  /* padding: 0; */
     box-sizing: border-box;
+    font-family: 'Rubik Mono One', sans-serif;
 
 }
 
@@ -70,11 +71,14 @@ border-left:4px solid black ;
 .box1{
      flex: auto;
      display: flex;
+     flex: 1;
      gap: 2rem;
      align-content: center;
      flex-direction: row;
      justify-content: flex-start;
      flex-wrap: wrap;
+     font-family: 'Rubik 80s Fade', cursive;
+     font-size: 48px;
  }
 
  .box2{
@@ -147,6 +151,10 @@ border-left:4px solid black ;
      padding: 5px;
 
  }
+ .dark-mode .btn-head{
+    background-color: #F8C630;
+  }
+
 
  .playerOpps{
     background-color: #F8C630;
@@ -173,6 +181,75 @@ border-left:4px solid black ;
    
 }
 
+/* modals and to re start the game  */
 .reset{
-    display: none;
+    background-color: #F8C630;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    border-top: 2px solid black;
+    border-left:2px solid black ;
+    border-radius: 5px;
+    padding: 10px;
 }
+
+
+.modal {
+    display: none; /* Hide the modal by default */
+    position: fixed; /* Make the modal appear fixed on the screen */
+    z-index: 1; /* Ensure that the modal appears on top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    border-radius: 10px;
+    border: 10px solid black;
+   
+    
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Set the modal width to 80% */
+    border-radius: 15px;
+    border: 10px solid black;
+    gap: 10px;
+   
+  }
+  
+  .close-button {
+    /* position: absolute; */
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    border-top: 2px solid black;
+    border-left:2px solid black ;
+    border-radius: 5px;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    cursor: pointer;
+    
+  
+  }
+  
+  .dark-mode .modal-content {
+    background-color: #1F2937;
+    color: #fbfbfb;
+  }
+
+ 
+  .youLose{
+      display: flex;
+      justify-content: space-around;
+      background-color: #F8C630;
+      border: 10px solid black;
+      border-radius: 10px;
+      gap: 20px;
+  }

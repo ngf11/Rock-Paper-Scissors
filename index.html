@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,1,200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,1,200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,1,200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+    
 </head>
 <body>
     <header>
@@ -73,9 +77,48 @@
                 
                 <span>Machine</span>
             </div>
-            <button class="reset" onclick="resetGame()">Play Again</button>
+            
         </div>
+        <div class="modal" id="lose-modal">
+            <div class="modal-content">
+             
+              <header class="youLose">
+                <h1>Game Over</h1>
+                <button class="close-button"><b>X</b></button>
+              </header>
+              <iframe src="https://giphy.com/embed/3ohs81rDuEz9ioJzAA" width="480" height="358" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+              <button class="reset" onclick="resetGame()">Play Again</button>  
+            </div>
+          </div>
+              
+          <div class="modal" id="win-modal">
+            <div class="modal-content">
+             
+              <header class="youLose">
+                <h1>You Win</h1>
+                <button class="close-button"><b>X</b></button>
+              </header>
+              <iframe src="https://giphy.com/embed/3ohs81rDuEz9ioJzAA" width="480" height="358" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+              <button class="reset" onclick="resetGame()">Play Again</button>  
+            </div>
+          </div>
+
+          <div class="modal" id="tie-modal">
+            <div class="modal-content">
+             
+              <header class="youLose">
+                <h1>Tie</h1>
+                <button class="close-button"><b>X</b></button>
+              </header>
+              <iframe src="https://giphy.com/embed/3ohs81rDuEz9ioJzAA" width="480" height="358" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+              <button class="reset" onclick="resetGame()">Play Again</button>  
+            </div>
+          </div>
+              
+              
+              
         </section>
+        <!-- <button class="reset" onclick="resetGame()">Play Again</button> -->
     
     </main>
 <footer>

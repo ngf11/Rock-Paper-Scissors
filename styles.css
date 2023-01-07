@@ -1,0 +1,269 @@
+
+*{
+ /* padding: 0; */
+    box-sizing: border-box;
+    font-family: 'Rubik Mono One', sans-serif;
+
+}
+
+body{
+    display: flex;
+     flex-direction: column;
+    min-height: 100vh;
+   line-height: 1.6;
+   border: 2px solid black;
+   margin: auto;
+   
+   
+}
+ 
+header, footer{
+    padding: 20px;
+background-color: #F8C630;
+border-right: 10px solid black;
+border-bottom: 10px solid black;
+border-top: 4px solid black;
+border-left:4px solid black ;
+
+
+
+
+ }
+
+ header{
+     display: flex;
+     justify-content: space-between;
+     border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+ }
+
+ footer{
+     display: flex;
+    margin-top: auto;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+ }
+
+ @media(min-width:768px){
+    .container1{
+        display: flex;
+        flex: 1;
+       flex-direction: row;
+        flex-wrap: wrap;
+       justify-content: space-around;
+   
+    }
+
+    .container2{
+    display: flex;
+    /* flex: 1; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 50px;
+    gap: 10px;
+    }
+}
+
+.box1{
+     flex: auto;
+     display: flex;
+     flex: 1;
+     gap: 2rem;
+     align-content: center;
+     flex-direction: row;
+     justify-content: flex-start;
+     flex-wrap: wrap;
+     font-family: 'Rubik 80s Fade', cursive;
+     font-size: 48px;
+ }
+
+ .box2{
+     flex: 2;
+     display: contents;
+     align-items: center;
+     gap: 2rem;
+     
+ }
+
+ .box3{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    flex-wrap: wrap;
+     
+    
+ }
+.content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+ .score{
+     display: flex;
+    flex: 2; 
+    flex-direction: row;
+    /* align-content: center; */
+    justify-content: space-evenly;
+    gap: 4px;
+    flex-wrap: wrap;
+ }
+
+ .humanPlayer{
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     margin: auto;
+
+    border-right: 10px solid black;
+    border-bottom: 10px solid black;
+    border-top: 4px solid black;
+    border-left:4px solid black ;
+    border-radius: 10px;
+    height: 100px;
+    width: 250px;
+
+ }
+
+ .Keeping-score{
+     display: flex;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    border-top: 2px solid black;
+    border-left:2px solid black ;
+    border-radius: 10px;
+    padding: 10px;
+    height: auto;
+ }
+
+ .btn-head{
+     background-color: #fbfbfb;
+     border-right: 4px solid black;
+     border-bottom: 4px solid black;
+     border-top: 2px solid black;
+     border-left:2px solid black ;
+     border-radius: 10px;
+     padding: 5px;
+
+ }
+ .dark-mode .btn-head{
+    background-color: #F8C630;
+  }
+
+
+ .playerOpps{
+    background-color: #F8C630;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    border-top: 2px solid black;
+    border-left:2px solid black ;
+    border-radius: 15px;
+   
+ }
+ .result-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+ }
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+.dark-mode{
+    background-color: #1F2937;
+    color: #fbfbfb;
+   
+}
+
+/* modals and to re start the game  */
+.reset{
+    background-color: #F8C630;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    border-top: 3px solid black;
+    border-left:3px solid black ;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+.modal {
+    display: none; /* Hide the modal by default */
+    position: fixed; /* Make the modal appear fixed on the screen */
+    z-index: 1; /* Ensure that the modal appears on top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    border-radius: 10px;
+    border: 10px solid black;
+   
+    
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Set the modal width to 80% */
+    border-radius: 15px;
+    border: 10px solid black;
+    gap: 10px;
+   
+  }
+  
+  .close-button {
+    /* position: absolute; */
+    height: auto;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    border-top: 2px solid black;
+    border-left:2px solid black ;
+    border-radius: 5px;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    cursor: pointer;
+    
+  
+  }
+  
+  .dark-mode .modal-content {
+    background-color: #1F2937;
+    color: #fbfbfb;
+  }
+
+ 
+  .youLose{
+      display: flex;
+      justify-content: space-around;
+      background-color: #F8C630;
+      border: 10px solid black;
+      border-radius: 10px;
+      gap: 20px;
+  }
+
+  .gifBox{
+    border: 10px solid black;
+    border-radius: 10px;
+    padding: 10px;
+  }

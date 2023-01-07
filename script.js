@@ -46,16 +46,37 @@ function playRound(playerChoice){
             }
           }
 
+        //   function displayResult(playerChoice, computerChoice, result) {
+        //     alert(`You chose ${playerChoice}, the computer chose ${computerChoice}. ${result}`);
+        //   }
+
+        // Displaying resuls in the html 
+        function displayResult(playerChoice, computerChoice, result) {
+            const resultContainer = document.getElementById("result-container");
+            const roundResult = `You chose ${playerChoice}, the computer chose ${computerChoice}. ${result}`;
+            resultContainer.innerHTML += `<p>${roundResult}</p>`;
+          }
+
+          function removeResult() {
+            const resultContainer = document.getElementById("result-container");
+            resultContainer.innerHTML = "";
+          }
+          
           function displayResult(playerChoice, computerChoice, result) {
-            alert(`You chose ${playerChoice}, the computer chose ${computerChoice}. ${result}`);
+            const resultContainer = document.getElementById("result-container");
+            const roundResult = `You chose ${playerChoice}, the computer chose ${computerChoice}. ${result}`;
+            resultContainer.innerHTML += `<p>${roundResult}</p>`;
+          
+            setTimeout(removeResult, 2000); // remove the result from the result container after 2000 milliseconds (2 seconds)
           }
     
           function checkGameOver() {
             if (playerScore === 3) {
-              alert('You won the game!');
+              showWinModal();
             } else if (computerScore === 3) {
-              alert('You lost the game!');
               showLoseModal();
+            } else if (playerScore === 2 && computerScore === 2) {
+              showTieModal();
             }
           }
              
@@ -88,27 +109,64 @@ function showLoseModal() {
     const modal = document.getElementById("lose-modal");
     modal.style.display = "block";
   }
+  function showWinModal() {
+    const modal = document.getElementById("win-modal");
+    modal.style.display = "block";
+  }
 
-  function closeModal() {
-    const modal = document.getElementById("lose-modal");
+  function showTieModal() {
+    const modal = document.getElementById("tie-modal");
+    modal.style.display = "block";
+  }
+
+  function closeModal(modal) {
+    // const modal = document.getElementById("lose-modal");
+    // const modalWin = document.getElementById("win-modal")
+    // const modalTie = document.getElementById("tie-modal")
     modal.style.display = "none";
   }
   
-  const closeButton = document.querySelector(".close-button");
-  closeButton.addEventListener("click", closeModal);
-
-
+//   const closeButton = document.querySelector(".close-button");
+// closeButton.addEventListener("click", function() {
+//   const modal = this.closest('.modal');
+//   closeModal(modal);
+// });
+  
+const closeButtons = document.querySelectorAll(".close-button");
+closeButtons.forEach(button => {
+  button.addEventListener("click", function() {
+    const modal = this.closest('.modal');
+    closeModal(modal);
+  });
+});
 
   function resetGame() {
     playerScore = 0;
     computerScore = 0;
     document.getElementById("human-score").innerText = playerScore;
     document.getElementById("machine-score").innerText = computerScore;
-    closeModal();
+    const modalWin = document.getElementById('win-modal');
+    const modalTie = document.getElementById('tie-modal');
+    const modalLose = document.getElementById('lose-modal');
+    closeModal(modalWin);
+    closeModal(modalTie);
+    closeModal(modalLose);
   }
 
 
+// buttons 
 
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => {
+  button.addEventListener("mouseenter", event => {
+    event.target.style.transform = "scale(1.1)";
+  });
+
+  button.addEventListener("mouseleave", event => {
+    event.target.style.transform = "scale(1)";
+  });
+});
 
 
 

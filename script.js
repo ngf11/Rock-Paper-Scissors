@@ -121,17 +121,11 @@ function showLoseModal() {
   }
 
   function closeModal(modal) {
-    // const modal = document.getElementById("lose-modal");
-    // const modalWin = document.getElementById("win-modal")
-    // const modalTie = document.getElementById("tie-modal")
+  
     modal.style.display = "none";
   }
   
-//   const closeButton = document.querySelector(".close-button");
-// closeButton.addEventListener("click", function() {
-//   const modal = this.closest('.modal');
-//   closeModal(modal);
-// });
+
   
 const closeButtons = document.querySelectorAll(".close-button");
 closeButtons.forEach(button => {
@@ -170,88 +164,3 @@ buttons.forEach(button => {
 });
 
 
-
-
-
-
-
-//-------- check wiiner Fuenction ---------
-// function checkWinner(player, computer){
-//     if (player == computer){
-//         console.log('No one Wins!')
-       
-//        } else if (computer == 'Rock' && player== 'Scissors' ||
-//                     computer == 'Scissors' && player == 'Paper' || 
-//                     computer == 'Paper' && player== 'Rock') {
-//             console.log('You lose')
-            
-//         } else if (player == 'Rock' && computer == 'Scissors' ||
-//                     player == 'Scissors' && computer== 'Paper' || 
-//                     player == 'Paper' && computer == 'Rock') {
-//             console.log('You win')
-//        }
-
-// } this function was called to the playRound() fuctinton with a const
-
-
-
-
-
-
-// ------------- SECOND TRY-----------------
-// let playerSelection= prompt('Lets play!!Pick rock, paper, scissors. Type it in.');
-//     playerSelection = playerSelection.toLowerCase();
-// const computerSelection = gameArray[ Math.floor(Math.random() * gameArray.length)];
- 
-//     function playRound(playerSelection, computerSelection) {
-//         if (playerSelection == computerSelection){
-//          console.log('No one Wins!')
-        
-//         } else if (computerSelection == 'Rock' && playerSelection == 'Scissors' ||
-//                      computerSelection == 'Scissors' && playerSelection == 'Paper' || 
-//                      computerSelection == 'Paper' && playerSelection== 'Rock') {
-//              console.log('You lose')
-             
-//          } else if (playerSelection == 'Rock' && computerSelection == 'Scissors' ||
-//                      playerSelection == 'Scissors' && computerSelection == 'Paper' || 
-//                      playerSelection == 'Paper' && computerSelection == 'Rock') {
-//              console.log('You win')
-//         }
-        
-//          }
-         
-//          playRound(playerSelection, computerSelection);
-   
-    
-//    function game(){
-//     for (let i = 0; i < 3; i++) {
-//         playRound();
-//         let playerSelection= prompt('Lets play!!Pick rock, paper, scissors. Type it in.');
-//     playerSelection = playerSelection.toLowerCase();
-      
-//        }
-//    }
-//    game();
-   
-   
-   // FIRST CHOISE 
-
-   // function getComputerChoice (){
-//    let random = gameArray[ Math.floor(Math.random() * gameArray.length)];
-   
-// }
-//     getComputerChoice();
-       // function playRound(playerSelection, computerSelection) {
-    //    if ( playerSelection == 'Rock' && computerSelection == 'Scissors' ||
-    //         playerSelection == 'Scissors' && computerSelection == 'Paper' || 
-    //         playerSelection == 'Paper' && computerSelection == 'Rock'){
-
-    //    console.log(`You Win! ${playerSelection} beats ${computerSelection}`)
-    //    }else{
-    //        console.log(`You lose! ${computerSelection} beats ${playerSelection}`)
-    //    }
-    //     }
-        
-      
-    //   playRound();
-    //   console.log(playRound(playerSelection, computerSelection));

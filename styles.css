@@ -13,9 +13,11 @@ body{
    line-height: 1.6;
    border: 2px solid black;
    margin: auto;
-   
-   
+  
+  justify-content: center;
 }
+   
+
  
 header, footer{
     padding: 20px;
@@ -266,4 +268,17 @@ border-left:4px solid black ;
     border: 10px solid black;
     border-radius: 10px;
     padding: 10px;
+  }
+.restGame{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-right: 20px;
+}
+  #reset-game{
+     padding: 10px;
+      background-color: #F8C630;
+      border: 5px solid black;
+      border-radius: 8px;
   }
